@@ -7,15 +7,15 @@
 When executed, parses a JSON dump of DevTools messages.
 """
 
-import bisect
-import collections
-import copy
-import json
-import logging
-import re
-import urlparse
+# import bisect
+# import collections
+# import copy
+# import json
+# import logging
+# import re
+# import urlparse
 
-import devtools_monitor
+# import devtools_monitor
 
 
 class Timing(object):
@@ -316,7 +316,7 @@ class Request(object):
     return json.dumps(self.ToJsonDict(), sort_keys=True, indent=2)
 
 
-class RequestTrack(devtools_monitor.Track):
+class RequestTrack():
   """Aggregates request data."""
   _REDIRECT_SUFFIX = '.redirect'
   # Request status
@@ -622,8 +622,8 @@ def _CopyFromDictToObject(d, o, key_attrs):
 
 
 if __name__ == '__main__':
-  import json
-  import sys
+  # import json
+  # import sys
   events = json.load(open(sys.argv[1], 'r'))
   request_track = RequestTrack(None)
   for event in events:
