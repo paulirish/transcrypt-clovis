@@ -8,11 +8,11 @@ When executed as a script, takes a loading trace, and prints the activity
 breakdown for the request dependencies.
 """
 
-import collections
-import logging
-import operator
+# import collections
+# import logging
+# import operator
 
-import request_track
+# import request_track
 
 
 class ActivityLens(object):
@@ -271,10 +271,10 @@ class _EventsTree(object):
 
 
 if __name__ == '__main__':
-  import sys
-  import json
-  import loading_trace
-  import request_dependencies_lens
+  # import sys
+  # import json
+  # import loading_trace
+  # import request_dependencies_lens
 
   filename = sys.argv[1]
   json_dict = json.load(open(filename))
@@ -284,4 +284,4 @@ if __name__ == '__main__':
       loading_trace)
   deps = dependencies_lens.GetRequestDependencies()
   for requests_dep in deps:
-    print activity_lens.GenerateEdgeActivity(requests_dep)
+    print(activity_lens.GenerateEdgeActivity(requests_dep))

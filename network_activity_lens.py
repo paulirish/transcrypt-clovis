@@ -4,10 +4,10 @@
 
 """Gives a picture of the network activity between timestamps."""
 
-import bisect
-import collections
-import itertools
-import operator
+# import bisect
+# import collections
+# import itertools
+# import operator
 
 
 class NetworkActivityLens(object):
@@ -206,5 +206,5 @@ class NetworkEvent(object):
     downloaded_bytes = self.DownloadedBytes()
     value = 1000 * downloaded_bytes / float(self.end_msec - self.start_msec)
     if value > 1e6:
-      print self._kind, downloaded_bytes, self.end_msec - self.start_msec
+      print(self._kind, downloaded_bytes, self.end_msec - self.start_msec)
     return value
