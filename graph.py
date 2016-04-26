@@ -4,9 +4,9 @@
 
 """Support for graphs."""
 
-import collections
+# import collections
 
-import common_util
+# import common_util
 
 
 class Node(object):
